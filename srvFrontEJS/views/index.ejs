@@ -1,27 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= titulo %></title>
+    <title>Home</title>
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container mt-5">
-      <h1 class="text-center"><%= titulo %></h1>
-      <div class="text-center mt-4">
-        <!-- Link para a página de manutenção de salas de aula -->
-        <a href="http://localhost:26000/saladeaula" class="btn btn-primary"
-          >Manutenção de Salas de Aula</a
-        >
-      </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-custom {
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, #6dd5ed, #2193b0);
+            color: white;
+        }
+
+        .title {
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .icon-feature {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #2193b0;
+        }
+
+        .stats-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2193b0;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <!-- Header Section -->
+        <div class="card p-5 animate__animated animate__fadeIn mb-5">
+            <h1 class="text-center title animate__animated animate__fadeInDown mb-4">
+                Sistema de Controle Escolar
+            </h1>
+            <p class="text-center text-muted mb-4">
+                Sistema integrado para gestão e manutenção de salas de aula
+            </p>
+            <div class="text-center">
+                <a href="http://localhost:26000/saladeaula" 
+                   class="btn btn-custom animate__animated animate__fadeInUp">
+                    <i class="fas fa-door-open me-2"></i>
+                    Manutenção de Salas de Aula
+                </a>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="row gy-4 mb-5">
+            <div class="col-md-4">
+                <div class="feature-card animate__animated animate__fadeInLeft">
+                    <i class="fas fa-calendar-check icon-feature"></i>
+                    <h3>Agendamento</h3>
+                    <p>Gerencie reservas de salas de forma eficiente e organizada</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card animate__animated animate__fadeInUp">
+                    <i class="fas fa-tools icon-feature"></i>
+                    <h3>Manutenção</h3>
+                    <p>Acompanhe e registre todas as manutenções realizadas</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card animate__animated animate__fadeInRight">
+                    <i class="fas fa-chart-line icon-feature"></i>
+                    <h3>Relatórios</h3>
+                    <p>Acesse relatórios detalhados sobre o uso das salas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-container animate__animated animate__fadeIn">
+            <div class="row">
+                <div class="col-md-4 stat-item">
+                    <div class="stat-number">50+</div>
+                    <div>Salas Gerenciadas</div>
+                </div>
+                <div class="col-md-4 stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div>Agendamentos Mensais</div>
+                </div>
+                <div class="col-md-4 stat-item">
+                    <div class="stat-number">99%</div>
+                    <div>Taxa de Disponibilidade</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer text-center">
+            <div class="mb-3">
+                <a href="#" class="text-decoration-none text-muted mx-2">
+                    <i class="fas fa-question-circle"></i> Ajuda
+                </a>
+                <a href="#" class="text-decoration-none text-muted mx-2">
+                    <i class="fas fa-envelope"></i> Contato
+                </a>
+                <a href="#" class="text-decoration-none text-muted mx-2">
+                    <i class="fas fa-info-circle"></i> Sobre
+                </a>
+            </div>
+            <small class="text-muted">© 2024 Sistema de Gestão de Salas. Todos os direitos reservados.</small>
+        </footer>
     </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>
