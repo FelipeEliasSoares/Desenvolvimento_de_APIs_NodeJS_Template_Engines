@@ -66,13 +66,13 @@ npm install
 
 1. **Crie o Banco de Dados:**
 
-   Acesse seu banco de dados (por exemplo, PostgreSQL) e crie um banco chamado `erp_controle_escolar`:
+   Acesse seu banco de dados (por exemplo, PostgreSQL) e crie um banco chamado `escolar`:
 
    ```sql
    CREATE DATABASE escolar;
    ```
 
-2. **Crie a Tabela `salasdeaula`:**
+3. **Crie a Tabela `salasdeaula`:**
 
    Execute o seguinte script SQL para criar a tabela necessária:
 
