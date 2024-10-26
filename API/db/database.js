@@ -10,6 +10,15 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
+//* Para caso o env esteja com erro
+/*const pool = new Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "escolar",
+  password: "",
+  port: 5432,
+});
+*/
 module.exports = {
   query: (text, params) => pool.query(text, params),
 };
