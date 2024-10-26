@@ -160,7 +160,7 @@ Após seguir os passos de instalação, você deve ter três servidores rodando 
 
 1. **API RESTful**: [http://localhost:4000](http://localhost:4000)
 2. **Servidor EJS (Página Inicial)**: [http://localhost:25000](http://localhost:25000)
-3. **Servidor Nunjucks (Manutenção de Salas de Aula)**: [http://localhost:26000/manutSalaDeAula](http://localhost:26000/manutSalaDeAula)
+3. **Servidor Nunjucks (Manutenção de Salas de Aula)**: [http://localhost:26000/saladeaula](http://localhost:26000/saladeaula)
 
 ## Uso
 
@@ -174,7 +174,7 @@ Após seguir os passos de instalação, você deve ter três servidores rodando 
 
 2. **Acesse a Página de Manutenção de Salas de Aula (Nunjucks):**
 
-   Abra o navegador e vá para: [http://localhost:26000/manutSalaDeAula](http://localhost:26000/manutSalaDeAula)
+   Abra o navegador e vá para: [http://localhost:26000/saladeaula](http://localhost:26000/saladeaula)
 
    - **Funcionalidades:**
      - Exibe uma tabela com as salas de aula cadastradas na API.
